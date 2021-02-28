@@ -1,0 +1,105 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-item {
+    perspective: 500px;
+    margin: 15px;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 610px;
+    border-radius: 25px;
+    transform-style: preserve-3d;
+    transition: 1s;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, .5);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    background: #3D5385;
+    width: 300px;
+    height: 550px;
+    border-radius: 25px;
+    padding: 30px 50px;
+}
+
+.card-front {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-front img {
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+
+
+.card-back {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.card-back img {
+    border-radius: 25px;
+    width: 200px;
+    box-shadow: 6px 6px rgba(29, 28, 28, 0.24);
+}
+
+
+.card-back .nombre {
+    margin-top: 10px;
+    line-height: 35px;
+}
+
+.card-back hr {
+    border-color: #263352;
+    border-style: solid;
+    background: #263352;
+    border-width: 1.5px;
+    border-radius: 50%;
+}
+
+.card-back .logo img{
+    padding: 5px;
+    border: solid 3px #263352;
+    width: 50px;
+    box-shadow: 4px 3px rgba(29, 28, 28, 0.24);
+    margin-top: 30px;
+}
+
+.card-back .subt {
+    font-size: 20px;
+    margin: 20px 0;
+    margin-bottom: 10px;
+    line-height: 35px;
+    font-weight: bold;
+}
+
+.card-back .texto {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.card-item:hover .card {
+    transform: rotateY(180deg);
+}
+
+
+.link{
+    margin-top: 100px;
+    color: #fff;
+}
